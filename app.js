@@ -1,12 +1,7 @@
-const express = require('express')
-const app = express()
 require('dotenv').config();
-const port = process.env.PORT;
+const Server = require('./models/Server');
 
-app.get('/', function (req, res) {
-  res.send('Hello World NODEJS EXPRESS')
-})
+const server = new Server();
 
-app.listen(port)
+server.listen();
 
-console.log('Escuchando el puerto', port);
