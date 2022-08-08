@@ -26,6 +26,11 @@ const getQuasar = (req, res = response) => {
     });
 }
 
+/**
+ * Endpoint para obtener la respuesta del mensaje y posición
+ * @param {*} req JSON
+ * @param {*} res 200,404
+ */
 const topSecret = async(req, res = response) => {
     const bodySatellites = req.body;
 

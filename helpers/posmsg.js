@@ -4,6 +4,10 @@ const { readFile } = require('../helpers/jsonFile');
 const Location = require('../services/Location');
 const Message = require('../services/Message');
 
+/**
+ * Obtener la posición triangulada del mensaje
+ * @returns []
+ */
 const findPositionSatellites = () => {
     const fileData = readFile();
     let positionsArray = [];
@@ -17,6 +21,10 @@ const findPositionSatellites = () => {
     return finalPosition.getLocation(positionsArray);
 }
 
+/**
+ * Obtener el mensaje decodificado
+ * @returns String
+ */
 const getMessagesFromFile = () => {
     console.log("ingresa a obtener el mensaje");
 

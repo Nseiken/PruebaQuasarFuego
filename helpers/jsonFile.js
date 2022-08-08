@@ -2,7 +2,12 @@ const fs = require('fs');
 const data = {};
 data.table = [];
 
+/**
+ * Escribir el archivo con el objeto JSON proveniente
+ * @param {*} objectJSON 
+ */
 const writeFile = async(objectJSON) => {
+    console.log(objectJSON);
     try {
         data.table.push(objectJSON);
         const jsonString = JSON.stringify(data);
@@ -13,6 +18,10 @@ const writeFile = async(objectJSON) => {
     }
 }
 
+/**
+ * Leemos los datos del json generado
+ * @returns JSON
+ */
 const readFile = () => {
     try {
         const data = fs.readFileSync(`./output/satellites.json`, "utf8");

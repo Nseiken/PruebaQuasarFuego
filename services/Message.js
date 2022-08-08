@@ -1,4 +1,11 @@
 class Message {
+    /**
+     * Lógica de servicio para obtener el mensaje
+     * @param {*} message1 
+     * @param {*} message2 
+     * @param {*} message3 
+     * @returns String
+     */
     getMessage(message1, message2, message3) {
         let decodedMsg = "";
         let size = 0;
